@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  pg:
+    image: postgres:15.4-alpine3.18
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: laser112
+      POSTGRES_DB: landing_db
+    ports:
+      - "5440:5432"
+    volumes:
+      - ./pg-docker/data:/var/lib/postgresql/data
