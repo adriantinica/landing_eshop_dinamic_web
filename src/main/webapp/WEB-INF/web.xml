@@ -6,6 +6,23 @@
     <welcome-file>index.jsp</welcome-file>
     
   </welcome-file-list>
+
+  <context-param>
+	  <param-name>url</param-name> 
+	  <param-value>jdbc:postgresql://localhost:5440/landing_db</param-value>
+  </context-param>
+  <context-param>
+	  <param-name>user</param-name> 
+	  <param-value>postgres</param-value>
+  </context-param>
+  <context-param>
+	  <param-name>password</param-name> 
+	  <param-value>laser112</param-value>
+  </context-param>
+  <context-param>
+	  <param-name>ssl</param-name> 
+	  <param-value>false</param-value>
+  </context-param>
   <servlet>
     <description></description>
     <display-name>DownloadServlet</display-name>
@@ -26,4 +43,7 @@
     <servlet-name>SignupAction</servlet-name>
     <url-pattern>/signup-action</url-pattern>
   </servlet-mapping>
+  <listener>
+    <listener-class>shop.DbContextListener</listener-class>
+  </listener>
 </web-app>
