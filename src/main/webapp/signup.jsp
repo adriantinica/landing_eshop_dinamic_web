@@ -35,10 +35,14 @@
     }
 %>
 
-      <image width=200 height=200 src="icon.png" alt="calculator.png">
+      <image width=200 height=200 src="/landing-eshop-dinamic-web/src/main/webapp/WEB-INF/ICONS/calculator_icon.png" alt="calculator.png">
       
       
-      <H2>In order to download our products please make an account !!!</H2>
+      <H2>In order to download our products please make an account or Sign in !!!</H2>
+      
+     <p>
+     	<a href="<%=request.getContextPath()%>/signin.jsp">Sign in HERE!</a>
+     </p>
       
       
     <table align="center" bgcolor=#ccccff cellpadding=10 style="border-radius: 10px;">
@@ -80,7 +84,10 @@
 		        
 		
 		        <button >Register</button>
+		        
 		    </form>
+		    
+		   
 		  </td>
 	    </tr>
     </table>
