@@ -61,7 +61,13 @@ public class DbContextListener implements ServletContextListener {
      * @see ServletContextListener#contextDestroyed(ServletContextEvent)
      */
     public void contextDestroyed(ServletContextEvent sce)  { 
-         // TODO Auto-generated method stub
+         // TODO close the db connection
+    	if (conn != null) {
+            try {
+                conn.close();
+                System.out.println("Database connection closed successfully.");
+            } catch (SQLException e) {
+                System.err.println("Error closing the database connection: " + e.getMessage());
+            }
+        }
     }
-	
-}
